@@ -22,15 +22,19 @@ https://msysgit.github.io/
 
 `npm install -g  bower grunt-cli yo`
 
-### Install Node Package
+### Install generator
 
-`npm install -g node-dev grunt-cli grunt-init`
+`npm install -g generator-konode`
 
 ## Create New Project
 
 if you wanto to create new Project, path(C:\project\test)
 
-`grunt resolve`
+`mkdir C:\project\test`
+
+`cd C:\project\test`
+
+`yo konode`
 
 ## Start Node
 
