@@ -1,4 +1,4 @@
-# KO-NODE
+# generator-konode
 Knockout.js and Node.js(express) template for Yeoman Generator
 
 built-in
