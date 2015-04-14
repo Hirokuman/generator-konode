@@ -18,7 +18,7 @@ https://nodejs.org/
 
 https://msysgit.github.io/
 
-### Install bower, grunt, Yeoman
+### Install bower, grunt, yeoman
 
 `npm install -g  bower grunt-cli yo`
 
