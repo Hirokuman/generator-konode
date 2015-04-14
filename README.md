@@ -30,11 +30,11 @@ https://msysgit.github.io/
 
 if you wanto to create new Project, path(C:\project\test)
 
-`mkdir C:\project\test`
-
-`cd C:\project\test`
-
-`yo konode`
+````
+mkdir C:\project\test
+cd C:\project\test
+yo konode
+````
 
 ## Start Node
 
