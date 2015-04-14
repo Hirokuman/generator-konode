@@ -1,0 +1,23 @@
+{
+    "version": "1.4.1",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./typings/express/express.d.ts",
+        "./typings/jquery/jquery.d.ts",
+        "./typings/knockout/knockout.d.ts",
+        "./typings/node/node.d.ts",
+        "./app.ts",
+        "./public/src/assets/js/script.ts"
+    ]
+}
