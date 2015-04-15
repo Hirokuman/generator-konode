@@ -35,12 +35,24 @@ if ('production' == app.get('env')) {
     });
 }
 
+//ajax request
 app.post('/json', function (req, res) {
     console.log("requested");
+    console.log(req.body.name);
+    console.log(req.body.input1);
+
+    var dao:SampleDAO = new SampleDAO();
+    var json = JSON.parse(dao.getData());
+
     res.contentType('application/json');
-    var json = JSON.parse('{ "id":"foo" }');
     res.send(JSON.stringify(json));
 });
+
+class SampleDAO {
+  public getData():string {
+    return '{ "foo" : "bar" }';
+  }
+}
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

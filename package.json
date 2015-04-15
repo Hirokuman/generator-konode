@@ -1,8 +1,10 @@
 {
   "name": "generator-konode",
-  "version": "0.0.1",
+  "version": "0.0.8",
+  "private": false,
   "description": "Yeoman generator",
   "license": "MIT",
+  "readmeFilename": "README.md",
   "main": "app/index.js",
   "repository": "hirokuman/generator-konode",
   "author": {

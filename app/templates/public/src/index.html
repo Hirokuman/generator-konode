@@ -8,9 +8,17 @@
 <link rel="stylesheet" href ="assets/css/style.css" />
 </head>
 <body>
-<input data-bind="value: name" />
-<label data-bind="text: name"></label>
-<button data-bind="click: btnClick">send data</button>
+<p>
+  databind-sample
+  <input data-bind="value: name" />
+  <label data-bind="text: name"></label>
+</p>
+
+<p>
+  ajax-sample
+  <input name="input1" data-bind="value: input1" />
+  <button data-bind="click: btnClick">send data</button>
+</p>
 <script src="assets/js/script-lib.js"></script>
 <script src="assets/js/script.js"></script>
 </script>
