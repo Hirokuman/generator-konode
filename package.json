@@ -1,14 +1,14 @@
 {
   "name": "generator-konode",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "Hirokuman/generator-konode",
+  "repository": "hirokuman/generator-konode",
   "author": {
     "name": "",
     "email": "",
-    "url": "https://github.com/Hirokuman"
+    "url": "https://github.com/hirokuman"
   },
   "scripts": {
     "test": "mocha"
