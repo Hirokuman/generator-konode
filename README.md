@@ -18,40 +18,40 @@ https://nodejs.org/
 
 ### Install git client
 
-for Windows
+#### for Windows
 
 https://msysgit.github.io/
 
-for Mac
+#### for Mac
 
 http://sourceforge.net/projects/git-osx-installer/
 
 ### Install bower, grunt, yeoman
 
-for Windows
+#### for Windows
 
 `npm install -g node-dev bower grunt-cli yo`
 
-for Mac
+#### for Mac
 
 ````
 sudo npm install -g node-dev bower grunt-cli yo
-sudo git config --global url."http://".insteadOf git://
+sudo git config --global url."https://".insteadOf git://
 ````
 
 ### Install generator
 
-for Windows
+#### for Windows
 
 `npm install -g generator-konode`
 
-for Mac
+#### for Mac
 
 `sudo npm install -g generator-konode`
 
 ## Create New Project
 
-for Windows
+#### for Windows
 
 if you wanto to create new Project, path(C:\project\test)
 
@@ -60,7 +60,7 @@ mkdir C:\project\test
 cd C:\project\test
 yo konode
 ````
-for Mac
+#### for Mac
 
 if you wanto to create new Project, path(/Users/user/project)
 
