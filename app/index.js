@@ -7,14 +7,13 @@ var chalk = require('chalk');
 
 var KoNodeGenerator = yeoman.generators.Base.extend({
   init: function () {
-    this.pkg = require('../package.json');
-
     this.on('end', function () {
       if (!this.options['skip-install']) {
         this.spawnCommand('grunt', ['resolve']);
       }
     });
   },
+  
   askFor: function () {
     var done = this.async();
 
@@ -50,6 +49,12 @@ var KoNodeGenerator = yeoman.generators.Base.extend({
     this.copy('tsconfig.json');
     this.directory('public');
     this.directory('typings');
+  },
+  
+  install: function () {
+    if (!this.options['skip-install']) {
+      this.npmInstall();
+    }
   }
 });
 
