@@ -1,5 +1,7 @@
 # generator-konode
-Knockout.js and Node.js(express) template for Yeoman Generator
+Knockout.js and Node.js(express) template for Yeoman Generator.
+
+this template is for Simple Page Application.
 
 built-in
 
@@ -45,6 +47,19 @@ yo konode
 `http://[hostname]:3000`
 
 ## Development
+### Implement these files
+
+#### Client Side
+````
+public/src/index.html
+public/src/assets/js/script.ts
+````
+
+#### Server Side
+````
+app.ts
+````
+
 ### Manual Compile Typescript
 
 `grunt compile`

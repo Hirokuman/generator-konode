@@ -81,7 +81,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'public/src/',
-          src: ['**'],
+          src: ['**', '!**/*.ts'],
           dest: 'public/dist/'
         }]
       },
