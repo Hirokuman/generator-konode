@@ -26,15 +26,25 @@ module.exports = function(grunt) {
       },
     },
     clean: {
-      files: ['public/dist']
+      dist: ['public/dist'],
+      addedjs: ["public/src/assets/js/*.js", "!public/src/assets/js/script.js", "!public/src/assets/js/script-lib.js"],
+      addedcss: ["public/src/assets/css/*.css", "!public/src/assets/css/style.css", "!public/src/assets/css/style-lib.css"],
     },
     concat: {
-      js: {
+      initjs: {
         src: ['**/dist/jquery.js', '**/dist/js/bootstrap.js', '**/dist/knockout.js'],
         dest: 'public/src/assets/js/script-lib.js'
       },
-      css: {
+      initcss: {
         src: ['**/dist/css/bootstrap.css', '**/dist/css/bootstrap-theme.css'],
+        dest: 'public/src/assets/css/style-lib.css'
+      },
+      addjs: {
+        src: ['public/src/assets/js/*.js', '!public/src/assets/js/script.js'],
+        dest: 'public/src/assets/js/script-lib.js'
+      },
+      addcss: {
+        src: ['public/src/assets/css/*.css', '!public/src/assets/css/style.css'],
         dest: 'public/src/assets/css/style-lib.css'
       },
     },
@@ -52,7 +62,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       jslib: {
-        src: '<%= concat.js.dest %>',
+        src: '<%= concat.initjs.dest %>',
         dest: 'public/dist/assets/js/script-lib.js'
       },
       js: {
@@ -109,6 +119,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('compile', ['ts:app', 'ts:script']);
-  grunt.registerTask('resolve', ['bower:install', 'concat:js', 'concat:css', 'copy:fonts', 'copy:cssmap', 'ts:default']);
-  grunt.registerTask('build', ['clean', 'copy:dist', 'uglify', 'cssmin']);
+  grunt.registerTask('addlib', ['concat:addjs', 'concat:addcss', 'clean:addedjs', 'clean:addedcss']);
+  grunt.registerTask('resolve', ['bower:install', 'concat:initjs', 'concat:initcss', 'copy:fonts', 'copy:cssmap', 'ts:default']);
+  grunt.registerTask('build', ['clean:dist', 'copy:dist', 'uglify', 'cssmin']);
 };
