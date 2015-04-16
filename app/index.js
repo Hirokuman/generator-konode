@@ -9,7 +9,7 @@ var KoNodeGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.on('end', function () {
       if (!this.options['skip-install']) {
-        this.spawnCommand('grunt', ['resolve']);
+        this.spawnCommand('grunt', ['init']);
       }
     });
   },
@@ -45,6 +45,7 @@ var KoNodeGenerator = yeoman.generators.Base.extend({
     this.copy('app.ts');
     this.copy('bower.json');
     this.copy('Gruntfile.js');
+    this.copy('README.md');
     this.template('package.json', 'package.json', this.name);
     this.copy('tsconfig.json');
     this.directory('public');

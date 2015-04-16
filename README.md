@@ -67,3 +67,11 @@ app.ts
 ### Auto Compile Typescript on File Edited
 
 `grunt watch`
+
+### Add Library
+
+````
+bower install [package-name] --save
+copy [css file to public/src/assets/css/] or [js file to public/src/assets/js/] //manually step
+grunt addlib
+````

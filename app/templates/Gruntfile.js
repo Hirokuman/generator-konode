@@ -120,6 +120,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('compile', ['ts:app', 'ts:script']);
   grunt.registerTask('addlib', ['concat:addjs', 'concat:addcss', 'clean:addedjs', 'clean:addedcss']);
-  grunt.registerTask('resolve', ['bower:install', 'concat:initjs', 'concat:initcss', 'copy:fonts', 'copy:cssmap', 'ts:default']);
+  grunt.registerTask('init', ['bower:install', 'concat:initjs', 'concat:initcss', 'copy:fonts', 'copy:cssmap', 'ts:default']);
+  grunt.registerTask('resolve', ['bower:install']);
   grunt.registerTask('build', ['clean:dist', 'copy:dist', 'uglify', 'cssmin']);
 };
