@@ -1,15 +1,18 @@
 {
   "name": "<%= props.name %>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "<%= props.description %>",
   "main": "app.js",
   "author": {
     "name": "<%= props.author %>"
   },
+  "repository": {
+  },
   "dependencies": {
     "express": "^3.4.4"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
     "grunt-bower-task": "^0.4.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",

@@ -30,11 +30,11 @@ module.exports = function(grunt) {
     },
     concat: {
       js: {
-        src: ['bower_components/jquery/dist/jquery.js', 'bower_components/bootstrap/dist/js/bootstrap.js', 'bower_components/knockout/dist/knockout.js'],
+        src: ['**/dist/jquery.js', '**/dist/js/bootstrap.js', '**/dist/knockout.js'],
         dest: 'public/src/assets/js/script-lib.js'
       },
       css: {
-        src: ['bower_components/bootstrap/dist/fonts/bootstrap.css', 'bower_components/bootstrap/dist/css/bootstrap-theme.css'],
+        src: ['**/dist/css/bootstrap.css', '**/dist/css/bootstrap-theme.css'],
         dest: 'public/src/assets/css/style-lib.css'
       },
     },
