@@ -10,6 +10,7 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "bootstrap": "~3.3.4",
-    "knockout": "~3.3.0"
+    "knockout": "~3.3.0"<% if(props.useSocketIO){ %>,
+    "socket.io-client": "~1.3.5"<% } %>
   }
 }

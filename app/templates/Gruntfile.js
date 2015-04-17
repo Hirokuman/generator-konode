@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     },
     concat: {
       initjs: {
-        src: ['**/dist/jquery.js', '**/dist/js/bootstrap.js', '**/dist/knockout.js'],
+        src: ['**/dist/jquery.js', '**/dist/js/bootstrap.js', '**/dist/knockout.js'<% if(props.useSocketIO) { %>, 'lib/socket.io-client/socket.io.js'<% } %>],
         dest: 'public/src/assets/js/script-lib.js'
       },
       initcss: {
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       jslib: {
-        src: '<%= concat.initjs.dest %>',
+        src: 'public/src/assets/js/script-lib.js',
         dest: 'public/dist/assets/js/script-lib.js'
       },
       js: {

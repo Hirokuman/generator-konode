@@ -8,19 +8,23 @@
 <link rel="stylesheet" href ="assets/css/style.css" />
 </head>
 <body>
-<p>
-  databind-sample
-  <input data-bind="value: name" />
-  <label data-bind="text: name"></label>
-</p>
-
-<p>
-  ajax-sample
-  <input name="input1" data-bind="value: input1" />
-  <button data-bind="click: btnClick">send data</button>
-</p>
+  <div>Knockout Sample</div>
+  <p>
+    <input data-bind="value: name" />
+    <label data-bind="text: name"></label>
+  </p>
+  <div>Ajax Sample</div>
+  <p>
+    <input name="input1" data-bind="value: input1" />
+    <button data-bind="click: sendajax">send data with ajax</button>
+  </p><% if(props.useSocketIO){ %>
+  <div>Socket.io Sample</div>
+  <p>
+    <button data-bind="click: connectWithSocketio">connect with socket.io</button>
+    <button data-bind="click: sendMessage">send message with socket.io</button>
+    <button data-bind="click: disconnect">disconnect</button>
+  </p><% } %>
 <script src="assets/js/script-lib.js"></script>
 <script src="assets/js/script.js"></script>
-</script>
 </body>
 </html>
